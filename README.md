@@ -118,5 +118,5 @@ The intelligence is **rule-based ML logic**, inspired by real machine learning s
 - Export match analytics
 
 
-### ❤️ Built with passion using Machine Learning concepts  
-⭐ If you like this project, don’t forget to **star the repository!**
+###  Built using Machine Learning concepts  
+⭐ By  **DEBASHRITA MANDAL**
