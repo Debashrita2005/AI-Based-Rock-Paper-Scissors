@@ -117,6 +117,20 @@ The intelligence is **rule-based ML logic**, inspired by real machine learning s
 - AI vs AI simulation
 - Export match analytics
 
+## 👨‍💻 Author
 
-###  Built using Machine Learning concepts  
-⭐ By  **DEBASHRITA MANDAL**
+**Debashrita Mandal**
+
+- GitHub: [Debashrita2005](https://github.com/Debashrita2005)
+- LinkedIn: [debashrita-mandal](https://www.linkedin.com/in/https://www.linkedin.com/in/debashrita-mandal-995279302/)
+
+
+## 📧 Contact
+
+For questions or feedback, please reach out to (mandaldebashrita@gmail.com)
+
+---
+
+Made with ❤️ by Debashrita Mandal
+```
+
