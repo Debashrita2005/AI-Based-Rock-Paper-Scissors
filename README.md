@@ -9,7 +9,7 @@ This AI **learns from the player’s behavior**, detects patterns, and adapts it
 
 ## 🚀 Live Demo
 
-🔗 **Play Now:** https://ai-based-rock-paper-scissors-debash.vercel.app/
+🔗 **Play Now:** https://ai-rock-paper-scissors-debashritama.vercel.app/
 
 ---
 
