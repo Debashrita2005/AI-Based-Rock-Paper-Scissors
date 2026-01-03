@@ -1,5 +1,3 @@
-### 1. `index.html`
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,4 +54,508 @@
         .stat-card {
             background: rgba(255,255,255,0.15);
             backdrop-filter: blur(10px);
-            padding
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .ai-status {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .game-area {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .choices-display {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .choice-box {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .choice-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .choice-icon {
+            font-size: 3em;
+            animation: bounce 0.5s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .result {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 25px;
+            min-height: 50px;
+            animation: pulse 0.5s ease;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .choice-btn {
+            padding: 30px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        .choice-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .choice-btn:active {
+            transform: translateY(0);
+        }
+
+        .rock-btn { background: #ef4444; }
+        .paper-btn { background: #3b82f6; }
+        .scissors-btn { background: #eab308; }
+
+        .history {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .history h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .history-list {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .history-item {
+            flex-shrink: 0;
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 150px;
+            font-size: 0.9em;
+        }
+
+        .history-win { background: rgba(74, 222, 128, 0.3); }
+        .history-loss { background: rgba(248, 113, 113, 0.3); }
+        .history-tie { background: rgba(251, 191, 36, 0.3); }
+
+        .reset-btn {
+            display: block;
+            margin: 0 auto 20px;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .reset-btn:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+        }
+
+        .info-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .info-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid white;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .choices-display {
+                grid-template-columns: 1fr;
+            }
+            
+            .buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI Rock Paper Scissors</h1>
+            <p>The AI learns your patterns using ML algorithms!</p>
+        </div>
+
+        <div class="ai-status" id="aiStatus">
+            🎲 Collecting Data... (0/5 games needed)
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" style="color: #4ade80;" id="playerWins">0</div>
+                <div class="stat-label">Your Wins</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: #f87171;" id="aiWins">0</div>
+                <div class="stat-label">AI Wins</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: #fbbf24;" id="ties">0</div>
+                <div class="stat-label">Ties</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: #60a5fa;" id="aiAccuracy">0%</div>
+                <div class="stat-label">AI Win Rate</div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="choices-display">
+                <div class="choice-box">
+                    <h3>You</h3>
+                    <div id="playerChoice" class="choice-icon">❓</div>
+                </div>
+                <div class="choice-box">
+                    <h3>AI</h3>
+                    <div id="aiChoice" class="choice-icon">❓</div>
+                </div>
+            </div>
+
+            <div class="result" id="result">Choose your move!</div>
+
+            <div class="buttons">
+                <button class="choice-btn rock-btn" onclick="playRound('rock')">
+                    🪨<br>ROCK
+                </button>
+                <button class="choice-btn paper-btn" onclick="playRound('paper')">
+                    📄<br>PAPER
+                </button>
+                <button class="choice-btn scissors-btn" onclick="playRound('scissors')">
+                    ✂️<br>SCISSORS
+                </button>
+            </div>
+        </div>
+
+        <div class="history">
+            <h3>📊 Recent History</h3>
+            <div class="history-list" id="historyList">
+                <div style="opacity: 0.5;">No games played yet</div>
+            </div>
+        </div>
+
+        <button class="reset-btn" onclick="resetGame()">🔄 Reset Game</button>
+
+        <div class="info-box">
+            <h3>🧠 How this Works</h3>
+            <ul>
+                <li>• <strong>Pattern Analysis:</strong> Tracks sequences in your last 5-10 moves</li>
+                <li>• <strong>Frequency Learning:</strong> Calculates probability distribution of your choices</li>
+                <li>• <strong>Markov Chain:</strong> Predicts next move based on current state transitions</li>
+                <li>• <strong>Adaptive Strategy:</strong> Counters detected patterns with 70% confidence</li>
+                <li>• <strong>Training Phase:</strong> Needs 5+ games to start making ML predictions</li>
+                <li>• <strong>Anti-Exploitation:</strong> Uses 30% randomness to avoid being predictable</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Built with ❤️ using Machine Learning | <a href="https://github.com/yourusername/ai-rock-paper-scissors" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize game state
+        var state = {
+            history: [],
+            scores: { player: 0, ai: 0, ties: 0 },
+            choices: ['rock', 'paper', 'scissors'],
+            icons: { 'rock': '🪨', 'paper': '📄', 'scissors': '✂️' },
+            isTrained: false,
+            minTrainingGames: 5
+        };
+        
+        // Ensure DOM is loaded before initializing
+        document.addEventListener('DOMContentLoaded', function() {
+            updateAIStatus();
+        });
+
+        function predictPlayerMove() {
+            if (state.history.length < state.minTrainingGames) {
+                return state.choices[Math.floor(Math.random() * 3)];
+            }
+
+            var recentMoves = [];
+            var tempHistory = state.history.slice(-10);
+            for (var j = 0; j < tempHistory.length; j++) {
+                recentMoves.push(tempHistory[j].player);
+            }
+            
+            var frequency = { 'rock': 0, 'paper': 0, 'scissors': 0 };
+            for (var i = 0; i < recentMoves.length; i++) {
+                frequency[recentMoves[i]]++;
+            }
+            
+            var transitions = {};
+            for (var i = 0; i < recentMoves.length - 1; i++) {
+                var current = recentMoves[i];
+                var next = recentMoves[i + 1];
+                if (!transitions[current]) transitions[current] = {};
+                transitions[current][next] = (transitions[current][next] || 0) + 1;
+            }
+            
+            var lastMove = recentMoves[recentMoves.length - 1];
+            var consecutive = 1;
+            for (var i = recentMoves.length - 2; i >= 0; i--) {
+                if (recentMoves[i] === lastMove) consecutive++;
+                else break;
+            }
+            
+            var prediction;
+            
+            if (consecutive >= 3) {
+                prediction = lastMove;
+            }
+            else if (transitions[lastMove] && Object.keys(transitions[lastMove]).length > 0) {
+                var nextMoves = transitions[lastMove];
+                var maxKey = null;
+                var maxVal = -1;
+                for (var key in nextMoves) {
+                    if (nextMoves[key] > maxVal) {
+                        maxVal = nextMoves[key];
+                        maxKey = key;
+                    }
+                }
+                prediction = maxKey;
+            }
+            else {
+                var maxKey = null;
+                var maxVal = -1;
+                for (var key in frequency) {
+                    if (frequency[key] > maxVal) {
+                        maxVal = frequency[key];
+                        maxKey = key;
+                    }
+                }
+                prediction = maxKey;
+            }
+            
+            if (Math.random() < 0.3) {
+                prediction = state.choices[Math.floor(Math.random() * 3)];
+            }
+            
+            return getCounterMove(prediction);
+        }
+
+        function getCounterMove(move) {
+            var counters = { 'rock': 'paper', 'paper': 'scissors', 'scissors': 'rock' };
+            return counters[move];
+        }
+
+        function determineWinner(player, ai) {
+            if (player === ai) return 'tie';
+            var wins = { 'rock': 'scissors', 'paper': 'rock', 'scissors': 'paper' };
+            return wins[player] === ai ? 'player' : 'ai';
+        }
+
+        function playRound(playerChoice) {
+            var aiChoice = predictPlayerMove();
+            
+            var winner = determineWinner(playerChoice, aiChoice);
+            
+            if (winner === 'player') {
+                state.scores.player++;
+                updateResult('You Win! 🎉', '#4ade80');
+            } else if (winner === 'ai') {
+                state.scores.ai++;
+                updateResult('AI Wins!', '#f87171');
+            } else {
+                state.scores.ties++;
+                updateResult("It's a Tie! 🤝", '#fbbf24');
+            }
+            
+            state.history.push({ player: playerChoice, ai: aiChoice, result: winner });
+            
+            if (state.history.length >= state.minTrainingGames && !state.isTrained) {
+                state.isTrained = true;
+            }
+            
+            updateDisplay(playerChoice, aiChoice);
+        }
+
+        function updateDisplay(playerChoice, aiChoice) {
+            if (playerChoice && aiChoice) {
+                document.getElementById('playerChoice').textContent = state.icons[playerChoice];
+                document.getElementById('aiChoice').textContent = state.icons[aiChoice];
+            }
+            
+            document.getElementById('playerWins').textContent = state.scores.player;
+            document.getElementById('aiWins').textContent = state.scores.ai;
+            document.getElementById('ties').textContent = state.scores.ties;
+            
+            var totalGames = state.history.length;
+            var accuracy = totalGames > 0 ? ((state.scores.ai / totalGames) * 100).toFixed(1) : 0;
+            document.getElementById('aiAccuracy').textContent = accuracy + '%';
+            
+            updateAIStatus();
+            updateHistory();
+        }
+
+        function updateResult(text, color) {
+            var resultEl = document.getElementById('result');
+            resultEl.textContent = text;
+            resultEl.style.color = color;
+        }
+
+        function updateAIStatus() {
+            var statusEl = document.getElementById('aiStatus');
+            if (!state.isTrained) {
+                var needed = state.minTrainingGames - state.history.length;
+                statusEl.innerHTML = '🎲 Collecting Data... (' + state.history.length + '/' + state.minTrainingGames + ' games needed)';
+                statusEl.style.color = '#fbbf24';
+            } else {
+                statusEl.innerHTML = '🧠 ML Active - Model trained on ' + state.history.length + ' games';
+                statusEl.style.color = '#4ade80';
+            }
+        }
+
+        function updateHistory() {
+            var historyList = document.getElementById('historyList');
+            var recent = state.history.slice(-10).reverse();
+            
+            if (recent.length === 0) {
+                historyList.innerHTML = '<div style="opacity: 0.5;">No games played yet</div>';
+                return;
+            }
+            
+            var html = '';
+            for (var i = 0; i < recent.length; i++) {
+                var game = recent[i];
+                var roundNum = state.history.length - i;
+                var className = game.result === 'player' ? 'history-win' : 
+                                 game.result === 'ai' ? 'history-loss' : 'history-tie';
+                var symbol = game.result === 'player' ? '✓' : 
+                              game.result === 'ai' ? '✗' : '=';
+                
+                html += '<div class="history-item ' + className + '">';
+                html += '<div><strong>Round ' + roundNum + '</strong></div>';
+                html += '<div>You: ' + state.icons[game.player] + ' ' + game.player + '</div>';
+                html += '<div>AI: ' + state.icons[game.ai] + ' ' + game.ai + '</div>';
+                html += '<div style="font-size: 1.5em; margin-top: 5px;">' + symbol + '</div>';
+                html += '</div>';
+            }
+            historyList.innerHTML = html;
+        }
+
+        function resetGame() {
+            if (confirm('Reset game? All ML training data will be lost.')) {
+                state.history = [];
+                state.scores = { player: 0, ai: 0, ties: 0 };
+                state.isTrained = false;
+                
+                document.getElementById('playerChoice').textContent = '❓';
+                document.getElementById('aiChoice').textContent = '❓';
+                updateResult('Choose your move!', 'white');
+                updateDisplay();
+            }
+        }
+    </script>
+</body>
+</html>
