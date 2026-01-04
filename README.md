@@ -5,7 +5,7 @@ This AI **learns from the player’s behavior**, detects patterns, and adapts it
 
 > 🧠 After a few rounds, the AI starts predicting your next move!
 
----
+
 
 ## 🚀 Live Demo
 
