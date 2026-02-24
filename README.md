@@ -11,7 +11,8 @@ This AI **learns from the player’s behavior**, detects patterns, and adapts it
 
 🔗 **Play Now:** https://ai-rock-paper-scissors-debashritama.vercel.app/
 
----
+--- After a few rounds, the AI starts predicting your next move!
+
 
 ## 🎯 Project Objective
 
