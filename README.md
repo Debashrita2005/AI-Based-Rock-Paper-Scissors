@@ -1,7 +1,7 @@
 #  AI-Based Rock Paper Scissors
 Created an AI-based Rock Paper Scissors game that adapts to player behavior using ML.
 An **Intelligent Rock–Paper–Scissors game** that doesn’t play randomly.  
-This AI **learns from the player’s behavior**, detects patterns, and adapts its strategy using **Machine Learning concepts** like frequency analysis and Markov Chains.
+This AI **learns from the player’s behavio**, detects patterns, and adapts its strategy using **Machine Learning concepts** like frequency analysis and Markov Chains.
 
 > 🧠 After a few rounds, the AI starts predicting your next move!
 
